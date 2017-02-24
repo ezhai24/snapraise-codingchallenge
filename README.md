@@ -1,1 +1,2 @@
 # snapraise-codingchallenge
+While plenty of to-do list applications already exist, they all tend to be overbearing in visual flair and features. As per my own needs, this will be a trimmed down, no-frills, simple to use, visually pleasing alternative.
