@@ -1,5 +1,11 @@
+html {
+    background-color: #006b8f;
+}
+
 body {
+    background-color: #006b8f;
     font-family: 'Lato', sans-serif;
+    color: white;
 }
 
 #main-content {
@@ -21,11 +27,14 @@ body {
 
 #task-input {
     padding: 5px 10px;
+    color: black;
 }
 
 .task {
-    border: 1px solid black;
+    margin-top: 20px;
+    border: 2px solid #b3d4fc;
     padding: 20px;
+    background-color: #3d8aa3;
 }
 
 .task-title {
@@ -34,8 +43,10 @@ body {
 
 .btn {
     margin-top: -3px;
+    background-color: #98c60c;
 }
 
 .delete-btn {
     float: right;
+    background-color: #00c4ff;
 }
