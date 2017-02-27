@@ -1,0 +1,41 @@
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+#main-content {
+    padding: 0% 30%;
+}
+
+#title {
+    margin-top: 80px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 60px;
+}
+
+#form-content {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+#task-input {
+    padding: 5px 10px;
+}
+
+.task {
+    border: 1px solid black;
+    padding: 20px;
+}
+
+.task-title {
+    margin: 0px;
+}
+
+.btn {
+    margin-top: -3px;
+}
+
+.delete-btn {
+    float: right;
+}
