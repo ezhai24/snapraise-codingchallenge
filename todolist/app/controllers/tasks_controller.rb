@@ -5,8 +5,13 @@ class TasksController < ApplicationController
 
     def create
         @task = Task.new(task_params)
-
         @task.save
+        redirect_to :back
+    end
+
+    def destroy
+        @task = Task.find(params[:id])
+        @task.destroy
         redirect_to :back
     end
 
@@ -14,5 +19,4 @@ class TasksController < ApplicationController
         def task_params
             params.require(:task).permit(:taskName)
         end
-        
 end

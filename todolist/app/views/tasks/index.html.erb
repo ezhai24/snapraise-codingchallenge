@@ -14,5 +14,8 @@
 <% @tasks.each do |task| %>
     <ul>
         <li><%= task.taskName %></li>
+        <li><%= link_to 'Destroy', task_path(task),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></li>
     </ul>
 <% end %>
