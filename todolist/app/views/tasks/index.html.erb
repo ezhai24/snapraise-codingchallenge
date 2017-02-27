@@ -7,12 +7,15 @@
     </p>
     
     <p>
-        <%= f.submit %>
+        <%= f.submit "New Task" %>
     </p>
 <% end %>
 
 <% @tasks.each do |task| %>
-    <ul>
-        <li><%= task.taskName %></li>
-    </ul>
+    <div>
+        <h3><%= task.taskName %></h3>
+        <%= button_to 'Delete', task_path(task),
+            method: :delete,
+            data: { confirm: 'Are you sure?' } %>
+    </div>
 <% end %>
