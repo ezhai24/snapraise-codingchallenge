@@ -1,14 +1,18 @@
 <h1>To Do List App *change*</h1>
 
 <%= form_for :task do |f| %>
- 
     <p>
         <%= f.label :task %><br>
-        <%= f.text_field :task %>
+        <%= f.text_field :taskName %>
     </p>
     
     <p>
         <%= f.submit %>
     </p>
- 
+<% end %>
+
+<% @tasks.each do |task| %>
+    <ul>
+        <li><%= task.taskName %></li>
+    </ul>
 <% end %>
