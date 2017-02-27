@@ -1,21 +1,37 @@
-<h1>To Do List App *change*</h1>
+<! DOCTYPE html>
 
-<%= form_for :task do |f| %>
-    <p>
-        <%= f.label :task %><br>
-        <%= f.text_field :taskName %>
-    </p>
-    
-    <p>
-        <%= f.submit "New Task" %>
-    </p>
-<% end %>
+<html lang="en">
 
-<% @tasks.each do |task| %>
-    <div>
-        <h3><%= task.taskName %></h3>
-        <%= button_to 'Delete', task_path(task),
-            method: :delete,
-            data: { confirm: 'Are you sure?' } %>
+<head>
+    <%= stylesheet_link_tag "style", 
+        "https://fonts.googleapis.com/css?family=Montserrat:700",
+        "https://fonts.googleapis.com/css?family=Lato",
+        media: "all" %>
+</head>
+
+<body class="container">
+
+    <div id="main-content">
+        <h1 id="title">Snap To It</h1>
+
+        <%= form_for :task do |f| %>
+            <div id="form-content">
+                <%= f.text_field :taskName, id: "task-input" %>            
+                <%= f.submit "New Task", class: "btn"%>
+            </div>
+        <% end %>
+
+        <% @tasks.each do |task| %>
+            <div class="task"> 
+                <%= button_to 'Finish', task_path(task),
+                    method: :delete,
+                    data: { confirm: 'Are you sure?' },
+                    class: "btn delete-btn" %>
+                <h3 class="task-title"><%= task.taskName %></h3>
+            </div>
+        <% end %>
     </div>
-<% end %>
+
+</body>
+
+</html>
