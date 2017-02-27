@@ -1,5 +1,4 @@
 @import "twitter/bootstrap/bootstrap";
-@import "twitter/bootstrap/responsive";
 
 html {
     background-color: #006b8f;
@@ -15,9 +14,15 @@ body {
     margin: 0% 30%;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 992px) { /*Tablets*/
     #main-content {
-        margin: 0px;
+        margin: 0% 20%;
+    }
+}
+
+@media (max-width: 767px) { /*Mobile*/
+    #main-content {
+        margin: 10px;
     }
 }
 
@@ -26,7 +31,7 @@ body {
     margin-bottom: 30px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
-    font-size: 60px;
+    font-size: 55px;
 }
 
 #form-content {
@@ -35,8 +40,17 @@ body {
 }
 
 #task-input {
-    padding: 5px 10px;
+    border-radius: 4px;
+    padding: 6px 3px;
+    width: 35%;
     color: black;
+    font-family: 'Lato', sans-serif;
+}
+
+@media (max-width: 767px) {
+    #task-input {
+        width: 55%;
+    }
 }
 
 .task {
@@ -46,16 +60,35 @@ body {
     background-color: #3d8aa3;
 }
 
-.task-title {
+.task-name {
     margin: 0px;
 }
 
 .btn {
-    margin-top: -3px;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    border: 1px solid transparent;
+    border-radius: 4px;
     background-color: #98c60c;
+    font-family: 'Lato', sans-serif;
+    color: white;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: #87af0a;
 }
 
 .delete-btn {
+    margin-top: -6px;
     float: right;
     background-color: #00c4ff;
+}
+
+.delete-btn:hover {
+    background-color: #009ece;
 }
