@@ -26,7 +26,6 @@
             <div class="task"> 
                 <%= button_to 'Finish', task_path(task),
                     method: :delete,
-                    data: { confirm: 'Are you sure?' },
                     class: "btn delete-btn" %>
                 <h3 class="task-name"><%= task.taskName %></h3>
             </div>
